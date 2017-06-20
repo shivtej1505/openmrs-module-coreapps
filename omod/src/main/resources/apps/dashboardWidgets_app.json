@@ -121,5 +121,28 @@
         }
       }
     ]
+  },
+  {
+    "id": "coreapps.dataIntegrityViolations",
+    "instanceOf": "coreapps.template.dashboardWidget",
+    "description": "coreapps.dataIntegrityViolations.app.description",
+    "order": 10,
+    "config": {
+      "widget": "dataintegrityviolations",
+      "icon": "icon-question-sign",
+      "label": "Data Quality Violations",
+      "maxResults": "8"
+    },
+    "extensions": [
+      {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.mostRecentVitals.clinicianDashboardFirstColumn",
+        "appId": "coreapps.dataIntegrityViolations",
+        "extensionPointId": "patientDashboard.firstColumnFragments",
+        "extensionParams": {
+          "provider": "coreapps",
+          "fragment": "dashboardwidgets/dashboardWidget"
+        }
+      }
+    ]
   }
 ]

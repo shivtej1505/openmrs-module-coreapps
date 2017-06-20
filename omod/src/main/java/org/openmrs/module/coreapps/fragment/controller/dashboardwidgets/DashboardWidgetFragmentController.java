@@ -33,6 +33,12 @@ public class DashboardWidgetFragmentController {
 
         ObjectNode appConfig = app.getConfig();
 
+        System.out.println("------------------");
+        System.out.println(app.getId());
+        System.out.println(app.getLabel());
+        System.out.println(app.getDescription());
+        System.out.println("------------------");
+
         if (patient instanceof Patient) {
             patientWrapper.setPatient((Patient) patient);
         } else if (patient instanceof PatientDomainWrapper) {
